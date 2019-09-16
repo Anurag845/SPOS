@@ -1,0 +1,9 @@
+
+public class Job {
+	
+	private String name;
+	private int arr_time;
+	private int burst_time;
+	private int wait_time;
+
+}

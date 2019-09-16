@@ -1,0 +1,67 @@
+
+public class Job {
+	
+	private String name;
+	private int arr_time;
+	private int burst_time;
+	private int wait_time;
+	private int priority;
+	
+	public Job(String name, int arr_time, int burst_time, int wait_time) {
+		this.name = name;
+		this.arr_time = arr_time;
+		this.burst_time = burst_time;
+		this.wait_time = wait_time;
+	}
+
+	public Job(String name, int arr_time, int burst_time, int wait_time, int priority) {
+		super();
+		this.name = name;
+		this.arr_time = arr_time;
+		this.burst_time = burst_time;
+		this.wait_time = wait_time;
+		this.priority = priority;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getArr_time() {
+		return arr_time;
+	}
+
+	public void setArr_time(int arr_time) {
+		this.arr_time = arr_time;
+	}
+
+	public int getBurst_time() {
+		return burst_time;
+	}
+
+	public void setBurst_time(int burst_time) {
+		this.burst_time = burst_time;
+	}
+
+	public int getWait_time() {
+		return wait_time;
+	}
+
+	public void setWait_time(int wait_time) {
+		this.wait_time = wait_time;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+}

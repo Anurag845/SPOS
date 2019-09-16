@@ -1,0 +1,52 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class FCFS {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of jobs:- ");
+		int n = sc.nextInt();
+		ArrayList<Job> jobs = new ArrayList<Job>(n);
+	
+		String name;
+		int arr_time;
+		int burst_time;
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name:- ");
+			name = sc.next();
+			System.out.print("Enter arrival time:- ");
+			arr_time = sc.nextInt();
+			System.out.print("Enter burst time:- ");
+			burst_time = sc.nextInt();
+			jobs.add(new Job(name, arr_time, burst_time, 0));
+			System.out.println();
+		}
+		
+		Collections.sort(jobs,new Comparator<Job>() {
+			@Override
+			public int compare(Job o1, Job o2) {
+				return Integer.compare(o1.getArr_time(),o2.getArr_time());
+			}
+			
+		});
+		
+		System.out.println("The sequence of execution of jobs is ");
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.println(jobs.get(cnt).getName());
+		}
+		
+		int wait = 0;
+		for(int cnt = 0; cnt < n; cnt++) {
+			wait += jobs.get(cnt).getBurst_time();
+			jobs.get(cnt).setWait_time(wait);
+		}
+		
+		sc.close();
+	}
+
+}

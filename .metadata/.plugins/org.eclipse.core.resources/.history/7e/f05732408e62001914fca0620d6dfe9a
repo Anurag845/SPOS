@@ -1,0 +1,12 @@
+
+public class LITTAB {
+	
+	int literal;
+	int address;
+	
+	public LITTAB(int literal, int address) {
+		super();
+		this.literal = literal;
+		this.address = address;
+	}
+}

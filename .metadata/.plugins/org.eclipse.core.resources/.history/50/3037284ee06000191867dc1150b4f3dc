@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+
+public class Priority {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the number of jobs:- ");
+		int n = sc.nextInt();
+		
+		ArrayList<Job> jobs = new ArrayList<Job>(n);
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Job name:- ");
+			String name = sc.next();
+			System.out.print("Job arrival time:- ");
+			int arr_time = sc.nextInt();
+			System.out.print("Job burst time:- ");
+			int burst_time = sc.nextInt();
+			System.out.print("Job priority:- ");
+			int priority = sc.nextInt();
+			System.out.println();
+			jobs.add(new Job(name, arr_time,burst_time, 0 , priority));
+		}
+		
+		Collections.sort(jobs, new Comparator<Job>() {
+
+			@Override
+			public int compare(Job o1, Job o2) {
+				return Integer(o1.getPriority() > o2.getPriority());
+			}
+			
+		})
+		
+		int time = 0;
+		int cnt = 0;
+		
+		while(cnt < n) {
+			
+		}
+		
+		sc.close();
+	}
+
+}

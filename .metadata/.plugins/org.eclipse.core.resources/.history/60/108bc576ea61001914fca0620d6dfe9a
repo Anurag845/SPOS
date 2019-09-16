@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class LRU {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of pages:- ");
+		int n = sc.nextInt();
+		
+		System.out.println("Enter reference string:- ");
+		
+	}
+
+}

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class SJF {
+	
+	public static void min(String[] main) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of processes:- ");
+		int n = sc.nextInt();
+	}
+	
+}

@@ -1,0 +1,13 @@
+
+public class Priority {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		System.out.println("Enter the number of jobs:- ");
+		int n = sc.nextInt();
+		
+	}
+
+}

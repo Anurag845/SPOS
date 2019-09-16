@@ -1,0 +1,8 @@
+
+public class Int_Code {
+	
+	String inst;
+	String op1;
+	String op2;
+
+}

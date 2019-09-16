@@ -1,0 +1,20 @@
+MACRO XYZ &a,&b
+LOAD &a
+ADD &b
+MEND
+MACRO ABC
+LOAD p
+ADD q
+MEND
+MACRO PQR &a,&b,&c
+LOAD x
+ADD &a
+SUB &c
+MULT y
+STORE &b
+MEND
+LOAD m
+ABC
+XYZ 3,4
+PQR 3,4,5
+END

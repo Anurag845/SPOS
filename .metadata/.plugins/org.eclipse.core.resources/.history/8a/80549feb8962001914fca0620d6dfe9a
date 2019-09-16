@@ -1,0 +1,13 @@
+
+public class OPTAB {
+
+	String mnemonic;
+	int code;
+	
+	public OPTAB(String mnemonic, int code) {
+		super();
+		this.mnemonic = mnemonic;
+		this.code = code;
+	}
+		
+}

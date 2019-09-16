@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Banker {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int n = 5, m =3;
+		String Process[] = {"P0","P1","P2","P3","P4"};
+		int Available[] = {3,3,2};
+		
+		
+		
+	}
+	
+}

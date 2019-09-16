@@ -1,0 +1,7 @@
+
+public class LITTAB {
+	
+	int literal;
+	int address;
+
+}

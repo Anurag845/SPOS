@@ -1,0 +1,91 @@
+import java.util.Scanner;
+
+public class Banker {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of processes:- ");
+		int n = sc.nextInt();
+
+		String Process[] = new String[n];
+		boolean Finished[] = new boolean[n];
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name of process " + cnt + " :- ");
+			Process[cnt] = sc.next();
+			Finished[cnt] = false;
+		}
+		
+		System.out.print("Enter number of resources:- ");
+		int m = sc.nextInt();
+		
+		int Available[] = new int[n];
+		for(int cnt = 0; cnt < m; cnt++) {
+			System.out.print("Enter available instances of resource " + cnt + " :- ");
+			Available[cnt] = sc.nextInt();
+		}
+		
+		int Work[] = Available;
+		
+		int Allocation[][] = new int[n][m];
+		int Max[][] = new int[n][m];
+		
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				System.out.print("Enter instances of Resource " + j + " allocated to process " + i + " :- ");
+				Allocation[i][j] = sc.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				System.out.print("Enter maximum instances of Resource " + j + " required by process " + i + " :- ");
+				Max[i][j] = sc.nextInt();
+			}
+		}
+		
+		int Need[][] = new int[n][m];
+		
+		for(int i = 0; i < n; i++) {
+			for(int j = 0; j < m; j++) {
+				Need[i][j] = Max[i][j] - Allocation[i][j];
+			}
+		}
+		
+		int cnt = 0;
+		String Sequence[] = new String[n+1];
+		
+		while(cnt < n) {
+			boolean found = false;
+			for(int i = 0; i < n; i++) {
+				if(Finished[cnt] == false) {
+					int j = 0;
+					for(j = 0; j < m; j++) {
+						if(Need[i][j] > Work[j]) {
+							break;
+						}
+					}
+					if(j == m) {
+						for(j = 0; j < m; j++) {
+							Work[j] += Allocation[i][j];
+						}
+						Finished[i] = true;
+						found = true;
+						Sequence[cnt] = Process[i];
+						cnt++;
+					}
+				}
+			}
+			if(found == false) {
+				break;
+			}
+		}
+		
+		for(int k = 0; k < n; k++) {
+			System.out.println(Sequence[k]);
+		}
+		
+	}
+	
+}

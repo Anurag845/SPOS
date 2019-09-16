@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class FCFS {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of jobs:- ");
+		int n = sc.nextInt();
+		
+		String name;
+		int arr_time;
+		int burst_time;
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name:- ");
+			
+		}
+	}
+
+}

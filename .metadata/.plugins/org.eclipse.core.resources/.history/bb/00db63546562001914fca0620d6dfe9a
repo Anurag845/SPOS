@@ -1,0 +1,29 @@
+
+
+10 of 22
+spos pass1 littab,pooltab remaining
+Inbox
+x
+
+Anurag Gujarathi <anuraggujarathi@gmail.com>
+Attachments
+Jan 14, 2019, 11:42 AM
+to me
+
+
+8 Attachments
+
+public class Tuple {
+
+	String label;
+	String inst;
+	String opcode;
+	int address;
+	
+	Tuple(String label, String inst, String opcode, int address) {
+		this.label = label;
+		this.inst = inst;
+		this.opcode = opcode;
+		this.address = address;
+	}
+}

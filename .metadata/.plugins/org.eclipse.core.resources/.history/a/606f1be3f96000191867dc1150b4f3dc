@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class RoundRobin {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of processes:- ");
+		int n = sc.nextInt();
+		
+		Process process[] = new Process[n];
+		boolean Finished[] = new boolean[n];
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name of process " + cnt + " :- ");
+			String name = sc.next();
+			System.out.print("Enter arrival time of process " + name + " :- ");
+			int arr_time = sc.nextInt();
+			System.out.print("Enter burst time of process " + name + " :- ");
+			int burst_time = sc.nextInt();
+			process[cnt] = new Process(name, arr_time, 0, burst_time, burst_time);
+			Finished[cnt] = false;
+		}
+		
+		int quantum = 2;
+		
+		int time = 0;
+		
+		
+		
+		sc.close();
+	}
+
+}

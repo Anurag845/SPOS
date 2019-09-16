@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Banker {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		int m = 3, n =5;
+		String Process[] = {"P0","P1","P2","P3","P4"};
+		
+		int Available[] = {3,3,2};
+		
+		boolean Finished[] = new boolean[n];
+		for(int cnt = 0 ; cnt < n; cnt++) {
+			Finished[cnt] = false;
+		}
+		
+		
+		
+	}
+	
+}

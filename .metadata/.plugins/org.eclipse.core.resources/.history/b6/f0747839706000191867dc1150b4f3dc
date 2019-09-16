@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class SJF {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter the number of processes:- ");
+		int n = sc.nextInt();
+		Process process[] = new Process[n];
+		
+		String name;
+		int arr_time;
+		int burst_time;
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name of process " + cnt + " :- ");
+			name = sc.next();
+			System.out.print("Enter arrival time of process " + name + " :- ");
+			arr_time = sc.nextInt();
+			System.out.print("Enter burst time of process " + name + " :- ");
+			burst_time = sc.nextInt();
+			Process p = new Process(name, arr_time, 0, burst_time, burst_time);
+			process[cnt] = p;
+			System.out.println();
+		}
+		
+		int cnt = 0;
+		int time = 0;
+		int min = Integer.MAX_VALUE;
+		int pointer = 0;
+		while(cnt < n) {
+			boolean found = false;
+			for(int i = 0; i < n; i++) {
+				if(process[i].getArr_time() < time && (process[i].getRem_btime() < min && process[i].getRem_btime() > 0)) {
+					min = process[i].getRem_btime();
+					found = true;
+					pointer = i;
+				}
+			}
+			if(found == false) {
+				time++;
+				continue;
+			}
+			min = min - 1;
+			process[pointer].setRem_btime(min);
+			time++;
+			if(min == 0) {
+				min = Integer.MAX_VALUE;
+				process[pointer].setC_time(time);
+				process[pointer].setTa_time(time - process[pointer].getArr_time());
+				process[pointer].setWait_time(process[pointer].getTa_time() - process[pointer].getArr_time());
+				cnt++;
+				System.out.println(process[pointer].getName());
+			}
+		}
+		
+		float avg_wt = 0;
+		for(int i = 0; i < n; i++) {
+			avg_wt += process[i].getWait_time();
+		}
+		avg_wt /= n;
+		
+		System.out.println("Average waiting time is " + avg_wt);
+		
+	}
+
+}

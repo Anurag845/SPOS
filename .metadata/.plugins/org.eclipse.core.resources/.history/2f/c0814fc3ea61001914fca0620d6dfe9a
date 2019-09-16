@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class LRU {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of pages:- ");
+		int n = sc.nextInt();
+		int pages[] = new int[n];
+		
+		System.out.println("Enter reference string:- ");
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			pages[cnt] = sc.nextInt();
+		}
+		
+		System.out.print("Enter capacity:- ");
+		int capacity = sc.nextInt();
+		
+		int cache[] = new int[capacity];		
+	}
+
+}

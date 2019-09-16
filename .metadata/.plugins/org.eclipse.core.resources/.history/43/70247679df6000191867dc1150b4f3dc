@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Priority {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter the number of jobs:- ");
+		int n = sc.nextInt();
+		
+		Job jobs[] = new Job[n];
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Job name:- ");
+			String name = sc.next();
+			System.out.print("Job arrival time:- ");
+			int arr_time = sc.nextInt();
+			System.out.print("Job burst time:- ");
+			int burst_time = sc.nextInt();
+			System.out.print("Job priority:- ");
+			int priority = sc.nextInt();
+			System.out.println();
+		}
+		
+		sc.close();
+	}
+
+}

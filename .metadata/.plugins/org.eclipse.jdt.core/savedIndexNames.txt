@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+/home/dell/eclipse-workspace/SPOS/.metadata/.plugins/org.eclipse.jdt.core
+386636209.index
+799521454.index
+2426064912.index
+3998484506.index
+291348309.index
+613602433.index

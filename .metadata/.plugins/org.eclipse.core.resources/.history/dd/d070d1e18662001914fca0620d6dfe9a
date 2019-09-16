@@ -1,0 +1,8 @@
+
+public class Source_Tuple {
+	
+	String symbol;
+	String mnemonic;
+	String opcode;
+
+}

@@ -1,0 +1,16 @@
+
+public class Job {
+	
+	private String name;
+	private int arr_time;
+	private int burst_time;
+	private int wait_time;
+	
+	public Job(String name, int arr_time, int burst_time, int wait_time) {
+		this.name = name;
+		this.arr_time = arr_time;
+		this.burst_time = burst_time;
+		this.wait_time = wait_time;
+	}
+
+}

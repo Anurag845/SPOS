@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Optimal {
+	
+	public static void main(String args[]) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of pages:- ");
+		int n = sc.nextInt();
+		int pages[] = new int[n];
+		System.out.print("Enter the pages:- ");
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			pages[cnt] = sc.nextInt();
+		}
+		
+		int fault_cnt = 0;
+		
+		
+	}
+
+}

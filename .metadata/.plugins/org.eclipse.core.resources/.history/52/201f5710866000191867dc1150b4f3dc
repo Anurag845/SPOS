@@ -1,0 +1,11 @@
+public class SJF {
+	
+	public static void min(String[] main) {
+		
+		String[] Process = {"P1","P2","P3","P4"};
+		
+		
+		
+	}
+	
+}

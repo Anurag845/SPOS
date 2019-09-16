@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SJF {
+	
+	public static void min(String[] main) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of processes:- ");
+		int n = sc.nextInt();
+		
+		String process[] = new String[n];
+		for(int i = 0; i < n; i++) {
+			System.out.print("Name of process " + i + " :- ");
+			process[i] = sc.next();
+			System.out.print("Arrival time of process " + process[i] + " :- ");
+			int arr_time  = sc.nextInt();
+			System.out.print("Burst time of process " + process[i] + " :- ");
+			int burst_time = sc.nextInt();
+			Process p = new Process(process[i],arr_time,0,burst_time,burst_time);
+		}
+		
+		
+		
+	}
+	
+}

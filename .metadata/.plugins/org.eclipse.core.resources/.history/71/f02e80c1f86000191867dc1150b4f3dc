@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class RoundRobin {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter number of processes:- ");
+		int n = sc.nextInt();
+		
+		for(int cnt = 0; cnt < n; cnt++) {
+			System.out.print("Enter name of process " + cnt + " :- ");
+		}
+		
+	}
+
+}
